@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const HomeSummaryContainer = styled.div`
+   width: 100%;
    width: 1120px;
    height: auto;
-   margin: 0 auto;
+   margin: 94px auto 0;
    padding: 0 24px;
    
    display: flex;
    gap: 56px;
 
    img {
-      width: 43%;
+      width: 39%;
       height: auto;
       object-fit: none;
    }

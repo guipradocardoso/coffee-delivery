@@ -17,7 +17,7 @@ export function Header() {
                </HeaderLocation>
 
                <HeaderCart >
-                  <ShoppingCart size={22} weight='fill' color={theme['yellow-500']}/>
+                  <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
                </HeaderCart>
 
             </HeaderActions>

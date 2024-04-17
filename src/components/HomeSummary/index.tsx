@@ -1,4 +1,4 @@
-import { HomeSummaryContainer, HomeSummaryContent, HomeSummaryItems, HomeSummaryTitle, Items } from "./styles";
+import { HomeLogo, HomeSummaryContainer, HomeSummaryContent, HomeSummaryItems, HomeSummaryTitle, Items } from "./styles";
 
 import logoHome from '../../assets/logo-home.svg'
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
@@ -12,10 +12,12 @@ export function HomeSummary() {
       <HomeSummaryContainer>
          <HomeSummaryContent>
             <HomeSummaryTitle>
-                  <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-                  <span>Com o Coffee Delivery você recebe seu café onde estiver, 
-                     a qualquer hora
-                  </span>
+                     <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+                     <span>Com o Coffee Delivery você recebe seu café onde estiver, 
+                        a qualquer hora
+                     </span>
+               </HomeSummaryTitle>
+
                <HomeSummaryItems>
                   <Items>
                      <ShoppingCart size={16} weight="fill" style={{background: theme["yellow-900"]}}/>
@@ -38,12 +40,13 @@ export function HomeSummary() {
                   </Items>
 
                </HomeSummaryItems>
-            </HomeSummaryTitle>
-
-         </HomeSummaryContent>   
+         </HomeSummaryContent>
             
-         <img src={logoHome} alt="" />
 
+         
+         <HomeLogo>
+            <img src={logoHome} alt="" />
+         </HomeLogo>
       </HomeSummaryContainer>
    )
 }

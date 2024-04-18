@@ -2,10 +2,10 @@ import { styled } from "styled-components";
 
 export const HeaderContainer = styled.header`
    max-width: 1120px;
-   width: 100%;
+   width: 98%;
    height: 100%;
    margin: 0 auto;
-   padding: 32px 24px;
+   padding: 32px 0;
 
    display: flex;
    flex-wrap: wrap;

@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const HomeSummaryContainer = styled.div`
    max-width: 1120px;
-   width: 100%;
+   width: 98%;
    height: 100%;
    margin: 0 auto;
-   padding: 94px 24px 0;
+   padding: 94px 0 108px;
 
    display: flex;
    gap: 56px;

@@ -16,6 +16,8 @@ export function CoffeeCard() {
    async function loadCoffeeCard() {
       const response = await fetch('http://localhost:3333/coffeeCard')
       const data = await response.json();
+      console.log(data);
+      
 
       setCoffeeCards(data);
    }
@@ -50,7 +52,6 @@ export function CoffeeCard() {
                   </CoffeeCardContent>
 
                </CoffeeCardContainer>
-
             )
          })}
 

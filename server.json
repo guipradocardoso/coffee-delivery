@@ -10,35 +10,12 @@
     },
     {
       "id": 2,
-      "image": "/src/assets/imagesCoffeeCard/coffee-american.svg",
+      "image": "/src/assets/imagesCoffeeCard/coffee-traditional copy.svg",
       "tags": ["tradicional", "com leite"],
       "title": "Expresso Americano",
-      "description": "Expresso diluído, menos intenso que o tradicional",
-      "price": 9.90
-    },
-    {
-      "id": 3,
-      "image": "/src/assets/imagesCoffeeCard/coffee-american.svg",
-      "tags": ["tradicional", "com leite"],
-      "title": "Expresso Americano",
-      "description": "Expresso diluído, menos intenso que o tradicional",
-      "price": 9.90
-    },
-    {
-      "id": 4,
-      "image": "/src/assets/imagesCoffeeCard/coffee-american.svg",
-      "tags": ["tradicional", "com leite"],
-      "title": "Expresso Americano",
-      "description": "Expresso diluído, menos intenso que o tradicional",
-      "price": 9.90
-    },
-    {
-      "id": 5,
-      "image": "/src/assets/imagesCoffeeCard/coffee-american.svg",
-      "tags": ["tradicional", "com leite"],
-      "title": "Expresso Americano",
-      "description": "Expresso diluído, menos intenso que o tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
       "price": 9.90
     }
+    
   ]
 }

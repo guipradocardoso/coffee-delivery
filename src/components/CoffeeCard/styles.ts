@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const CoffeeCardContainer = styled.div`
-   background: ${props => props.theme["gray-300"]};
    width: 98%;
-   width: 256px;
+   min-width: 256px;
+   min-height: 310px;
+   background: ${props => props.theme["gray-300"]};
    display: flex;
    flex-direction: column;
    border-radius: 6px 36px;
+
+   margin-bottom: 40px;
 
    text-align: center;
 
@@ -54,6 +57,7 @@ export const CardDescription = styled.span`
    max-width: 216px;
    align-self: center;
    margin-top: 8px;
+   margin-bottom: 33px;
 
    font-size: 14px;
    line-height: 130%;

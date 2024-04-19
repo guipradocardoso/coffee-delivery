@@ -1,6 +1,5 @@
 import { CoffeeCard } from "../CoffeeCard";
-import { coffeeCard } from '../../../server.json'
-import { CoffeeListContainer, CoffeeListContent, CoffeeListHeader } from "./styles";
+import { CoffeeListContainer, CoffeeListHeader } from "./styles";
 
 export function CoffeeList() {
    return (
@@ -8,11 +7,8 @@ export function CoffeeList() {
          <CoffeeListHeader>
             <h2>Nossos cafés</h2>
          </CoffeeListHeader>
-         <CoffeeListContent>
-               {coffeeCard.map((coffee) => (
-                     <CoffeeCard key={coffee.id} {...coffee}/>
-               ))}
-         </CoffeeListContent>
+         
+         <CoffeeCard/>
 
       </CoffeeListContainer>
    )

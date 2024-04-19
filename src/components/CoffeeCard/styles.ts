@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+export const CoffeeMain = styled.main`
+   display: flex;
+   flex-wrap: wrap;
+   gap: 32px;
+`
+
 export const CoffeeCardContainer = styled.div`
-   width: 98%;
-   min-width: 256px;
-   min-height: 310px;
+   width: 100%;
+   width: 256px;
+   height: 310px;
    background: ${props => props.theme["gray-300"]};
    display: flex;
    flex-direction: column;

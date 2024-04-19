@@ -24,9 +24,3 @@ export const CoffeeListHeader = styled.div`
       color: ${props => props.theme["gray-800"]};
    }
 `
-
-export const CoffeeListContent = styled.div`
-   display: flex;
-   flex-wrap: wrap;
-   gap: 32px;
-`

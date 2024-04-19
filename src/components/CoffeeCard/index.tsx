@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CardDescription, CardTags, CardTitle, CoffeeCardContainer, CoffeeCardContent, CoffeeCardImg, CoffeePrice } from "./styles";
+import { CardDescription, CardTags, CardTitle, CoffeeCardContainer, CoffeeCardContent, CoffeeCardImg, CoffeeMain, CoffeePrice } from "./styles";
 
 interface CoffeeCardProps {
    id: number,
@@ -26,7 +26,7 @@ export function CoffeeCard() {
    }, [])
 
    return (
-      <div>
+      <CoffeeMain>
          {coffeeCards.map(coffee => {
             return (
                      
@@ -55,7 +55,7 @@ export function CoffeeCard() {
             )
          })}
 
-      </div>
+      </CoffeeMain>
 
    )
 }

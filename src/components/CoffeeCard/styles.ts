@@ -69,17 +69,21 @@ export const CardDescription = styled.span`
    line-height: 130%;
 `
 
-export const CoffeeCardContent = styled.div`
+export const CoffeeCardBuy = styled.div`
    width: 100%;
+   margin: 0 auto;
+   max-width: 208px;
    display: flex;
-   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
 
+   gap: 23px;
 `
 
 export const CoffeePrice = styled.div`
    display: flex;
+   gap: 5px;
    align-items: baseline;
-
 
    span:first-child{
       color: ${props => props.theme["gray-700"]};
@@ -92,5 +96,28 @@ export const CoffeePrice = styled.div`
       font-size: 24px;
       color: ${props => props.theme["gray-700"]};
    }
+`
 
+export const CoffeeOrder = styled.div<{ $itemAdded?: boolean}>`
+   display: flex;
+   align-items: center;
+   gap: 8px;
+
+   > button {
+   background-color: ${({ theme, $itemAdded}) => $itemAdded ? theme["yellow-900"] : theme["purple-900"]};
+
+   &:hover {
+      background-color: ${({ theme, $itemAdded}) => $itemAdded ? theme["yellow-500"] : theme["purple-500"]}
+   };
+   
+}
+`
+
+export const CoffeeOrderButton = styled.button`
+   display: flex;
+
+   background: ${props => props.theme["purple-900"]};
+   border: 0;
+   padding: 8px;
+   border-radius: 6px;
 `

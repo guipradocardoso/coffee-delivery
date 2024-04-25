@@ -2,13 +2,16 @@ import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 import logoHeader from '../../assets/logo.svg'
 import { ShoppingCart, MapPin } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
    const theme = useTheme()
    return(
       <HeaderContainer>
          <div className='container'>
-            <img src={logoHeader} alt="" />
+            <NavLink to="/">
+               <img src={logoHeader} alt="" />
+            </NavLink>
 
             <HeaderButtonsContainer>
                <HeaderButton variant='purple'>
@@ -16,9 +19,11 @@ export function Header() {
                   Porto Alegre, RS
                </HeaderButton>
 
-               <HeaderButton variant='yellow'>
-                  <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
-               </HeaderButton>
+               <NavLink to="/checkoutOrder">
+                  <HeaderButton variant='yellow'>
+                     <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
+                  </HeaderButton>
+               </NavLink>
             </HeaderButtonsContainer>
          </div>
       </HeaderContainer>

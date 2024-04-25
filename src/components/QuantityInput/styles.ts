@@ -1,36 +1,44 @@
 import styled from "styled-components";
 
 export const QuantityInputContainer = styled.div`
-   padding: 8.5px 8px;
-   background-color: ${props => props.theme["gray-500"]};
-   border-radius: 6px;
-
+   flex: 1;
+   background: ${({ theme }) => theme.colors["base-button"]};
+   
    display: flex;
    align-items: center;
+   justify-content: space-between;
    gap: 4px;
+   border-radius: 6px;
 
+   padding: 0.5rem;
 
-   button {
-      background: transparent;
-      border: 0;
-      align-items: center;
-      cursor: pointer;
-   }
+   input {
+      width: 100%;
+      text-align: center;
+      background: none;
+      border: none;
+      color: ${({ theme }) => theme.colors["base-title"]};
 
-   button svg {
-      color: ${props => props.theme["purple-500"]};
-
-      transition: all 0.2s;
-
-      &:hover {
-         transform: scale(1.25);
-         color: ${props => props.theme["purple-900"]};
+      &:focus {
+         outline: none;
       }
    }
+`
+export const IconWrapper = styled.button.attrs({
+   type: "button",
+})`
+   width: 0.875rem;
+   height: 0.875rem;
+   border: none;
+   background: none;
+   color: ${({ theme }) => theme.colors["brand-purple"]};
+   transition: 0.4s;
 
-   span {
-      width: 20px;
-      height: 21px;
-      color: ${props => props.theme["gray-900"]};
+   &:disabled {
+      opacity: 0.4;
+   }
+
+   &:not(:disabled):hover {
+      color: ${({ theme }) => theme.colors["brand-purple-dark"]};
    }
 `

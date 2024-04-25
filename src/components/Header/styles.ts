@@ -1,56 +1,67 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 
 export const HeaderContainer = styled.header`
-   max-width: 1120px;
-   width: 98%;
-   height: 100%;
-   margin: 0 auto;
-   padding: 32px 0;
+   width: 100%;
+   height: 6.5rem;
 
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-between;
+   background: ${({ theme }) => theme.colors["base-background"]};
    
-   background: ${props => props.theme["gray-100"]};
-`
-
-export const HeaderImage = styled.div`
    display: flex;
-   width: max-content;
-   
-`
-
-export const HeaderActions = styled.div`
-   display: flex;
-   gap: 12px;
-  
-`
-
-export const HeaderLocation = styled.div`
-   display: flex;
-
-   padding: 8px;
-   border-radius: 6px;
-   background: ${props => props.theme["purple-100"]};
    align-items: center;
+   justify-content: center;
+
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   
+
+   > div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+`
+
+export const HeaderButtonsContainer = styled.div`
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+`
+
+interface HeaderButtonProps {
+   variant: "purple" | "yellow"
+}
+
+export const HeaderButton = styled.button<HeaderButtonProps>`
+   display: flex;
+   align-items: center;
+   justify-content: center;
    gap: 4px;
 
-   span {
-      color: ${props => props.theme["purple-900"]};
-      font-size: 14px;
+   min-width: 2.3rem;
+   height: 2.3rem;
 
-   }
-   
-`
-
-export const HeaderCart = styled.div`
-   display: flex;
-
-   padding: 8px;
    border-radius: 6px;
-   align-items: center;
-   background: ${props => props.theme["yellow-100"]};
+   border: none;
 
-  
+   padding: 0 0.5rem;
+
+   position: relative;
+
+   font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
+
+   ${({ variant }) => css`
+      background: ${({ theme }) => theme.colors[`brand-${variant}-light`]};
+      color: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
+   `}
+
+   ${({ variant }) => 
+      variant === "purple" && 
+      css`
+         svg {
+            color: ${({ theme }) => theme.colors[`brand-${variant}`]};
+         }
+      `}
 `

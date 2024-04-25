@@ -1,4 +1,4 @@
-import { HeaderActions, HeaderCart, HeaderContainer, HeaderImage, HeaderLocation } from './styles'
+import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 import logoHeader from '../../assets/logo.svg'
 import { ShoppingCart, MapPin } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
@@ -7,21 +7,20 @@ export function Header() {
    const theme = useTheme()
    return(
       <HeaderContainer>
-         <HeaderImage>
+         <div className='container'>
             <img src={logoHeader} alt="" />
-         </HeaderImage>
 
-         <HeaderActions>
-            <HeaderLocation>
-               <MapPin size={22} weight='fill' color={theme['purple-500']} />
-               <span>Porto Alegre, RS</span>
-            </HeaderLocation>
+            <HeaderButtonsContainer>
+               <HeaderButton variant='purple'>
+                  <MapPin size={22} weight='fill' color={theme['purple-500']} />
+                  Porto Alegre, RS
+               </HeaderButton>
 
-            <HeaderCart >
-               <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
-            </HeaderCart>
-
-         </HeaderActions>
+               <HeaderButton variant='yellow'>
+                  <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
+               </HeaderButton>
+            </HeaderButtonsContainer>
+         </div>
       </HeaderContainer>
    )
 

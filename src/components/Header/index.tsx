@@ -1,11 +1,11 @@
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 import logoHeader from '../../assets/logo.svg'
 import { ShoppingCart, MapPin } from '@phosphor-icons/react'
-import { useTheme } from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart'
 
 export function Header() {
-   const theme = useTheme()
+   const { cartQuantity } = useCart()
    return(
       <HeaderContainer>
          <div className='container'>
@@ -15,13 +15,14 @@ export function Header() {
 
             <HeaderButtonsContainer>
                <HeaderButton variant='purple'>
-                  <MapPin size={22} weight='fill' color={theme['purple-500']} />
+                  <MapPin size={20} weight='fill'/>
                   Porto Alegre, RS
                </HeaderButton>
 
                <NavLink to="/checkoutOrder">
                   <HeaderButton variant='yellow'>
-                     <ShoppingCart size={22} weight='fill' color={theme['yellow-900']}/>
+                     {cartQuantity >= 1 && <span>{cartQuantity}</span>}
+                     <ShoppingCart size={22} weight='fill'/>
                   </HeaderButton>
                </NavLink>
             </HeaderButtonsContainer>

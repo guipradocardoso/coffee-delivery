@@ -25,10 +25,4 @@ export const ConfirmationSectionContainer = styled.section`
       align-items: center;
       justify-content: space-between;
    }
-
-   > a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
 `
